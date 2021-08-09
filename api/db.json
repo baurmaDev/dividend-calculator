@@ -1,0 +1,125 @@
+{   
+        "HealthCare": [
+        {
+            "id": 1,
+            "companyName": "Pfizer",
+            "dividendYield": 0.93,
+            "stockPrice": 42.81,
+            "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Pfizer_logo.svg/2560px-Pfizer_logo.svg.png"
+        },
+        {
+            "id": 2,
+            "companyName": "Johnson & Johnson",
+            "dividendYield": 0.67,
+            "stockPrice": 172.20,
+            "image": "data:image/png;base64,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"
+        },
+        {
+            "id": 3,
+            "companyName": "Amgen",
+            "dividendYield": 0.69,
+            "stockPrice": 241.54,
+            "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Amgen.svg/1200px-Amgen.svg.png"
+        },
+        {
+            "id": 4,
+            "companyName": "Merck",
+            "dividendYield": 0.76,
+            "stockPrice": 76.87,
+            "image": "https://cdn.worldvectorlogo.com/logos/merck.svg"
+        }
+    ],
+    "ConsumerGoods": [
+        {
+            "id": 1,
+            "companyName": "Philip Morris International Inc",
+            "dividendYield": 1.24,
+            "stockPrice": 100.09,
+            "image": "https://upload.wikimedia.org/wikipedia/ru/f/ff/Philip_Morris_International_Logo_svg.png"
+        },
+        {
+            "id": 2,
+            "companyName": "Coca-Cola Company",
+            "dividendYield": 0.83,
+            "stockPrice": 57.03,
+            "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/The_Coca-Cola_Company_logo.svg/2560px-The_Coca-Cola_Company_logo.svg.png"
+        },
+        {
+            "id": 3,
+            "companyName": "PepsiCo",
+            "dividendYield": 0.74,
+            "stockPrice": 156.95,
+            "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Pepsi_logo_new.svg/2560px-Pepsi_logo_new.svg.png"
+        },
+        {
+            "id": 4,
+            "companyName": "Procter & Gamble",
+            "dividendYield": 0.74,
+            "stockPrice": 142.23,
+            "image": "https://logos-download.com/wp-content/uploads/2016/06/P_and_G_Procter_and_Gamble_logo.png"
+        }
+    ],
+    "Energy": [
+        {
+            "id": 1,
+            "companyName": "Exxon Mobil",
+            "dividendYield": 1.20,
+            "stockPrice": 57.57,
+            "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Exxon_Mobil_Logo.svg/2560px-Exxon_Mobil_Logo.svg.png"
+        },
+        {
+            "id": 2,
+            "companyName": "Chevron",
+            "dividendYield": 1.08,
+            "stockPrice": 101.81,
+            "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Chevron_Logo.svg/1836px-Chevron_Logo.svg.png"
+        },
+        {
+            "id": 3,
+            "companyName": "Philips 66",
+            "dividendYield": 0.91,
+            "stockPrice": 73.43,
+            "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Phillips_66_logo.svg/1200px-Phillips_66_logo.svg.png"
+        },
+        {
+            "id": 4,
+            "companyName": "Shell",
+            "dividendYield": 1.84,
+            "stockPrice": 13.85,
+            "image": "https://cdn.worldvectorlogo.com/logos/shell-3.svg"
+        }
+    ],
+    "Finance": [
+        {
+            "id": 1,
+            "companyName": "Canadian Imperial Bank of Commerce",
+            "dividendYield": 1.65,
+            "stockPrice": 116.24,
+            "image": "https://upload.wikimedia.org/wikipedia/ru/thumb/c/cf/CIBC_logo.svg/1200px-CIBC_logo.svg.png"
+        },
+        {
+            "id": 2,
+            "companyName": "Morgan Stanley",
+            "dividendYield": 0.62,
+            "stockPrice": 101.81,
+            "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Morgan_Stanley_Logo.svg/2560px-Morgan_Stanley_Logo.svg.png"
+        },
+        {
+            "id": 3,
+            "companyName": "Toronto-Dominion Bank",
+            "dividendYield": 1.27,
+            "stockPrice": 66.45,
+            "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Toronto-Dominion_Bank_logo.svg/1200px-Toronto-Dominion_Bank_logo.svg.png"
+        },
+        {
+            "id": 4,
+            "companyName": "Bank of Montreal",
+            "dividendYield": 1.37,
+            "stockPrice": 99.70,
+            "image": "https://1000logos.net/wp-content/uploads/2021/06/Bank-of-Montreal-logo.png"
+        }
+    ]
+    
+    
+
+}
