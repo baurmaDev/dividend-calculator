@@ -32,17 +32,18 @@ export class Input extends Component {
             value={formProps.input.value}
             placeholder="  Enter your desired monthly income"  />
     }
-    healthSum = () => (this.state.desiredIncome * 100) / this.props.healthCare.dividendYield;
-    consumerGoodsSum = () => (this.state.desiredIncome * 100) / this.props.consumerGoods.dividendYield;
-    energySum = () => (this.state.desiredIncome * 100) / this.props.energy.dividendYield;
-    financeSum = () => (this.state.desiredIncome * 100) / this.props.finance.dividendYield;
+    healthSum = (desiredIncome) => (desiredIncome * 100) / this.props.healthCare.dividendYield;
+    consumerGoodsSum = (desiredIncome) => (desiredIncome * 100) / this.props.consumerGoods.dividendYield;
+    energySum = (desiredIncome) => (desiredIncome * 100) / this.props.energy.dividendYield;
+    financeSum = (desiredIncome) => (desiredIncome * 100) / this.props.finance.dividendYield;
+
     onSubmit = formValues => {
-        
-        this.setState({desiredIncome: ((formValues.sum * 12) / 4) / 4}, () => {
-           console.log(this.state.desiredIncome); 
+        const desiredIncome = ((formValues.sum * 12) / 4) / 4;
+        this.setState({desiredIncome}, () => {
+        console.log(this.state.desiredIncome); 
         }); 
         
-        this.setState({total: this.healthSum() + this.consumerGoodsSum() + this.energySum() + this.financeSum()}, () => {
+        this.setState({total: this.healthSum(desiredIncome) + this.consumerGoodsSum(desiredIncome) + this.energySum(desiredIncome) + this.financeSum(desiredIncome)}, () => {
             console.log(this.state.total); 
         })
     }
@@ -62,7 +63,7 @@ export class Input extends Component {
                             <p>Dividend Yield in month: {this.props.healthCare.dividendYield}%</p>
                         </div>
                         <div className="meta">
-                            <span className="price">{Math.floor(this.healthSum() / this.props.healthCare.stockPrice)} shares</span>
+                            <span className="price">{Math.floor(this.healthSum(this.state.desiredIncome) / this.props.healthCare.stockPrice)} shares</span>
                         </div>
                         </div>
                     </div>
@@ -77,7 +78,7 @@ export class Input extends Component {
                             <p>Dividend Yield in month: {this.props.consumerGoods.dividendYield}%</p>
                         </div>
                         <div className="meta">
-                            <span className="price">{Math.floor(this.consumerGoodsSum() / this.props.consumerGoods.stockPrice)} shares</span>
+                            <span className="price">{Math.floor(this.consumerGoodsSum(this.state.desiredIncome) / this.props.consumerGoods.stockPrice)} shares</span>
                         </div>
                         </div>
                     </div>
@@ -92,7 +93,7 @@ export class Input extends Component {
                                 <p>Dividend Yield in month: {this.props.energy.dividendYield}%</p>
                             </div>
                             <div className="meta">
-                                <span className="price">{Math.floor(this.energySum() / this.props.energy.stockPrice)} shares</span>
+                                <span className="price">{Math.floor(this.energySum(this.state.desiredIncome) / this.props.energy.stockPrice)} shares</span>
                             </div>
                         </div>
                     </div>
@@ -107,7 +108,7 @@ export class Input extends Component {
                                 <p>Dividend Yield in month: {this.props.finance.dividendYield}%</p>
                             </div>
                             <div className="meta">
-                                <span className="price">{Math.floor(this.financeSum() / this.props.finance.stockPrice)} shares</span>
+                                <span className="price">{Math.floor(this.financeSum(this.state.desiredIncome) / this.props.finance.stockPrice)} shares</span>
                             </div>
                         </div>
                     </div>
@@ -132,13 +133,7 @@ export class Input extends Component {
                         </List>
                     </Display>
                 </Container>
-                <h3 style={{display: 'flex',
-                            justifyContent: 'center',
-                            color: '#5a6268',
-                            backgroundColor: 'whitesmoke',
-                            width: '30rem',
-                            marginLeft: '750px',
-                            borderRadius: '0.75rem'}}>Made by Tursynbek Bauyrzhan</h3>
+                <h3 className="footer">Made by Tursynbek Bauyrzhan</h3>
             </React.Fragment>
         ) 
     }
@@ -157,6 +152,11 @@ const List = styled.div`
     background-color: whitesmoke;
     border-radius: 0.75rem;
     width: 30rem;
+
+    @media only screen and (max-width: 375px) {
+        width: 20rem;
+        margin-left: 80px;
+    }
 `
 
 const Wrap = reduxForm({

@@ -16,6 +16,7 @@ form {
   margin-right: -50%;
   transform: translate(-50%, -50%);
 }
+
 input {
   padding: 10px 0 10px 0;
   align-items: center;
@@ -28,4 +29,28 @@ input {
 }
 .image {
   padding: 15px 5px 15px 5px;
+}
+.footer {
+  display: flex;
+  justify-content: center;
+  color: #5a6268;
+  background-color: whitesmoke;
+  width: 30rem;
+  margin-left: 750px;
+  border-radius: 0.75rem;
+}
+@media only screen and (max-width: 375px) {
+  form {
+    margin-left: 60px;
+    margin-right: 60px;
+    width: 25rem;
+  }
+  .image {
+    width: 100px !important;
+    height: 100px !important;
+  }
+  .footer {
+    width: 20rem;
+    margin-left: 100px;
+  }
 }
